@@ -1,0 +1,562 @@
+
+/* Police*/
+
+@font-face
+{
+	font-family: 'Roboto';
+	src: url('Roboto.ttf')format('ttf');
+	src: url('Roboto.eot')format('eot');
+	src: url('Roboto.woff')format('woff');
+	src: url('Roboto.uvg')format('uvg');
+}
+
+@font-face
+{
+	font-family: 'Shrikhand';
+	src: url('fonts/Shrikhand.ttf')format('ttf');
+	src: url('fonts/Shrikhand.otf')format('eot');
+	src: url('fonts/Shrikhand.woff')format('woff');
+	src: url('fonts/Shrikhand.uvg')format('uvg');
+}
+
+.bloc_page
+{
+	font-family: Roboto, Arial, Georgia, Verdana, Serif;
+}
+
+h1, .title
+{
+	font-family: Shrikhand, Serif;
+}
+
+/*HEADER*/
+
+.block_page
+{
+	width: 100%;
+}
+
+.logo
+{
+	text-align: center;
+
+}
+
+.photo
+{
+	width: 1450px;
+	height: 700px;
+	margin-left: -10px;
+	margin-top: 30px;
+
+
+
+}
+
+/*SECTION MENU*/
+
+.menu
+{
+	background-color: #f7f5f5;
+	margin-left: -10px;
+	margin-right: -20px;
+	margin-top: -100px;
+	padding-top: 20px;
+	border-style: solid;
+	border-color: #f7f5f5;
+	border-width: 1px;
+	border-radius: 50px 50px 0px 0px;
+	text-align: center;
+	z-index: 1;
+	position: relative;
+	
+}
+
+.title
+{
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+/*effet sur le coeur identique à celui de l'accueil*/
+
+.fa-heart {
+  position: absolute;
+  margin-left: 950px;
+  margin-top: -30px;
+
+}
+
+.bord {
+  cursor: pointer;
+  background: linear-gradient(#f7f5f5, rgba(200, 15, 15, 0));
+}
+.empty:hover {
+  animation: filled 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background-color: #9356DC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transition-duration: 2s;
+}
+
+.filled {
+  cursor: pointer;
+  background: linear-gradient(#f7f5f5, rgba(00, 15, 15, 0));
+}
+.filled:hover {
+  animation: filled 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background-color: #9356DC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transition-duration: 1s;
+}
+
+.card-icons {   /*place le coeur au bon endroit*/
+  position: relative;
+  width: 36px;
+  height: 36px;
+  top: 0px;
+  right: 0px;
+  margin-left: 260px;
+  margin-top: -70px;
+}
+
+
+.menu h2
+{
+	
+	text-align: center;
+	border-style: solid;
+	border-color: red;
+	margin-right: 550px;
+	margin-left: 550px;
+	border-top-color: #f7f5f5;
+	border-left-color: #f7f5f5;
+	border-right-color: #f7f5f5;
+	border-bottom-color: #99E2D0;
+	padding-bottom: 20px;
+	margin-top: 100px;
+}
+
+
+
+
+/** animation sur card menu au survol apparition check**/
+
+
+.meal {
+
+  width: 700px;
+  height: 100px;
+  border: 1px solid #c3c3c3;
+  margin-top: 40px;
+  display: flex; 
+  border-radius: 20px; 
+  border: 2px solid white; 
+  box-shadow: 5px 5px #EEEEEE;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meal div:nth-of-type(1) {flex-grow: 3; padding: 5px;}
+.meal div:nth-of-type(2) {flex-grow: 0.1; padding: 25px;}
+.meal div:nth-of-type(3) {
+    flex-grow: 0; 
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 10px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: #99E2D0; 
+    opacity: 0; 
+    color: white; 
+}
+
+.meal:hover div:nth-of-type(1){
+    flex-grow: 0;
+    transition: all 0.5s;
+    white-space: nowrap;
+}
+
+.meal:hover div:nth-of-type(2){
+    flex-grow: 1;
+    transition: all 0.5s;    
+}
+
+.meal:hover div:nth-of-type(3){
+    flex-grow: 2;
+    transition: all 0.5s;
+    background-color: #99E2D0;
+    text-align: right;
+    display: block;
+    opacity: 1;
+}
+
+.fa-check
+{
+	padding-top: 20px;
+	padding-right: 40px;
+
+}
+
+.mealtext
+{
+	margin-top: 20px;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 15px;
+	width: 400px;
+
+}
+
+small
+{
+	font-weight: normal;
+}
+
+/*animation apparition progressive des lots de cards*/
+
+.slide-bottom-1 {
+	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation-delay: 0.5s;
+	    
+}
+
+.slide-bottom-2 {
+	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation-delay: 1s;
+	    
+}
+
+.slide-bottom-3 {
+	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation-delay: 1.5s;
+	    
+}
+
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(40px);
+            opacity: 1;
+  }
+}
+
+.delay-1
+{
+	animation-delay: 0.5s;
+}
+
+
+
+.button
+{
+	border-width: 1px;
+	border-style: hidden;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-right: 600px;
+	margin-left: 600px;
+	background: linear-gradient(#FF79DA, #9356DC);
+	box-shadow: 5px 5px 5px rgb(196, 196, 196); /*ombre portée grise*/
+	color: white;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.button:hover
+{
+	background: linear-gradient(#FFB0E9, #B992E7);
+	box-shadow: 10px 10px 10px rgb(196, 196, 196); /*ombre portée grise*/
+}
+
+/*footer*/
+
+footer
+{
+	background-color: #292d33;
+	color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+
+}
+
+footer ul 
+{
+	list-style-type: none; /* Retire la puce devant les éléments de la liste*/
+	display: flex;
+}
+
+footer li 
+{
+	padding-right: 200px;
+}
+
+footer a
+{
+	color: white;
+}
+
+footer a:hover
+{
+	color: #99E2D0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /*HEADER*/
+
+
+body 
+{
+	width: 100%;
+}
+
+.logo img
+{
+	width: 200px;
+	height: 40px;
+	margin-bottom: -20px;
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+.photo
+{
+	width: 400px;
+	height: 300px;
+}
+
+.header
+{
+	display: flex;
+}
+
+.fa-arrow-left
+{
+	margin-top: 20px;
+	margin-left: 20px;
+	color: black;
+}
+
+
+/*SECTION MENU */
+
+.menu
+{
+	width: 399px;
+	margin-left: -10px;
+
+}
+
+.title
+{
+	font-size: 30px;
+	margin-left: 50px;
+	text-align: left;
+	margin-left: 20px;
+}
+
+.fa-heart
+{
+	margin-left: 30px;
+	margin-top: 5px;
+}
+
+.menu h2
+{
+	margin-left: 5px; 
+	margin-bottom: -30px;
+	font-size: 20px;
+	border-radius: 20px 20px 20px 20px;
+}
+
+.meal
+{
+	width: 360px;
+	height: 100px;
+	margin-left: 5px;
+	margin-top: 20px;
+}
+
+
+.button
+{
+	
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-right: 70px;
+	margin-left: 70px;
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+/*effet sur cards*/ 
+.meal div:nth-of-type(1) {flex-grow: 3; padding: 5px;}
+.meal div:nth-of-type(2) {flex-grow: 0.1; padding: 25px;}
+.meal div:nth-of-type(3) {
+    flex-grow: 0; 
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 10px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: #99E2D0; 
+    opacity: 0; 
+    color: white; 
+}
+
+.meal:hover div:nth-of-type(1){
+    flex-grow: 0;
+    transition: all 0.5s;
+    white-space: nowrap;
+}
+
+.meal:hover div:nth-of-type(2){
+    flex-grow: 1;
+    transition: all 0.5s;    
+}
+
+.meal:hover div:nth-of-type(3){
+    flex-grow: 2;
+    transition: all 0.5s;
+    background-color: #99E2D0;
+    text-align: right;
+    display: block;
+    opacity: 1;
+}
+
+.fa-check
+{
+	padding-top: 20px;
+	padding-right: 15px;
+
+}
+
+/*effet ellipsis*/
+
+small
+{
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+
+.ellipsis
+{
+	border-style: hidden;
+	width: 150px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.overflow-ellipsis
+{
+	text-overflow: ellipsis;
+}
+
+
+
+/*FOOTER*/
+
+footer
+{
+	margin-top: -30px;
+	width: 595px;
+}
+
+footer h1
+{
+	font-size: 20px;
+	margin-left: -20px;
+}
+
+footer ul 
+{
+	display: flex;
+	flex-direction: column;
+}
+
+footer li 
+{
+	padding-right: 0px;
+	border-style: hidden;
+	margin-left: -60px;
+	margin-bottom: -25px;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media all and (min-width: 600px) and (max-width: 1000px){
+
+		.logo
+		{
+			margin-left: auto;
+			margin-right: auto;
+			width: 1400px;
+		}
+
+    .photo
+    {
+    	max-width: 1400px;
+    }
+
+    .menu
+    {
+    	width: 1400px;
+    }
+
+    .title
+    {
+    	text-align: center;
+    	margin-left: 80px;
+    }
+    
+    .fa-heart
+		{
+			margin-left: auto;
+			margin-right: auto;
+			width: 900px;
+			margin-top: 20px;
+		}
+    
+
+
+
+
+  	footer
+    {
+    	width: 1350px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .photo
+    {
+    	width: 103%;
+    }
+
+		.menu
+		{
+			width: 103%;
+		}
+}

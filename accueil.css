@@ -1,0 +1,568 @@
+/* Police*/
+
+@font-face
+{
+	font-family: 'Roboto';
+	src: url('Roboto.ttf')format('ttf');
+	src: url('Roboto.eot')format('eot');
+	src: url('Roboto.uvg')format('uvg');
+}
+
+@font-face
+{
+	font-family: 'Shrikhand';
+	src: url('fonts/Shrikhand.ttf')format('ttf');
+	src: url('fonts/Shrikhand.otf')format('eot');
+	src: url('fonts/Shrikhand.uvg')format('uvg');
+}
+
+header, .reservation_operation, .restaurants, footer ul
+{
+	font-family: Roboto, Arial, Georgia, Verdana, Serif;
+}
+
+
+
+/*SPINNER*/
+
+
+
+.demo {
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    position: relative;
+    text-align: justify;
+    animation: demo 5s;
+    opacity: 1;
+}
+
+/*@keyframes demo {
+    0% 
+    {
+    	display: block;
+    }
+    100% 
+    {
+    	opacity: 0; 
+    	display: none;
+    }
+*/
+
+
+
+.custom-loading-spinner {
+    cursor: progress;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.custom-loading-spinner::before {     /*ajouter un overlay sur le contenu*/
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    overflow: hidden;
+    /*background: #0b0b0b;*/
+    opacity: 0.6;
+}
+.custom-loading-spinner::after {   /*génère notre cercle blanc avec un bord rose*/
+    box-sizing: border-box;
+    z-index: 10002;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    border: 3px solid #9356DC;
+    border-top: 10px solid #FF79DA;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: custom-loading 6s;
+    background: #AAAAAA;
+  
+
+}
+
+@keyframes custom-loading {       /*permet rotation du cercle*/
+    0% { transform: rotate(0deg); }
+
+    100% 
+    { 
+    	transform: rotate(360deg);
+    	opacity: 0; 
+    	display: none;
+    }
+
+}
+
+/*HEADER*/
+
+.logo, .localisation, .reservation, .functioning
+{
+	text-align: center;
+}
+
+.restaurants h2
+{
+	text-align: center;
+}
+
+.localisation
+{
+	background-color: #e8e8e8;
+	height: 70px;
+	padding-top: 10px;
+	margin-top: 40px;
+}
+
+
+/*SECTION OPÉRATION DE RÉSERVATION*/
+
+.reservation
+{
+	background-color: #f7f5f5;
+	margin-top: -20px;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+.button
+{
+	border-width: 1px;
+	border-style: hidden;
+	border-radius: 30px 30px 30px 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 500px;
+	margin-left: 500px;
+	background: linear-gradient(#FF79DA, #9356DC);
+	box-shadow: 5px 5px 5px rgb(196, 196, 196); /*ombre portée grise*/
+	color: white;
+}
+
+.button:hover
+{
+	background: linear-gradient(#FFB0E9, #B992E7);
+	box-shadow: 10px 10px 10px rgb(196, 196, 196); /*ombre portée grise*/
+}
+
+
+.explore_button h3
+{
+	color: white;
+}
+
+.functioning_list
+{
+	border-width: 1px;
+	border-color: #f7f5f5;
+	border-style: solid;
+	border-radius: 20px 20px 20px 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 400px;
+	margin-left: -25px;
+	background: #f7f5f5;
+	margin-bottom: 50px;
+	box-shadow: 5px 5px 5px rgb(196, 196, 196); /*ombre portée grise*/
+	width: 500px;
+}
+
+.functioning_list:hover, .functioning_list:active
+{
+	background-color: #e8d3f2;
+	border-color: #e8d3f2;
+}
+
+.icone:hover, .icone:active
+{
+	color: #9356DC;
+}
+
+.number
+{
+	border-width: 1px;
+	border-color: #9356DC;
+	border-style: solid;
+	border-radius: 100px 100px 100px 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 0px;
+	margin-left: 450px;
+	background: #9356DC;
+	color: white;
+	width: 40px;
+	height: 20px;
+	z-index: 1;
+}
+
+.sidetoside /*met le numéro à coté de la phrase*/
+{
+	display: flex;
+	flex-direction: row;
+}
+
+/*SECTION RESTAURANT*/
+
+
+.restaurant_name
+{
+	font-weight: bold;
+}
+
+/*effet sur le coeur*/
+
+.fa-heart {
+  position: absolute;
+
+}
+
+.empty:hover {
+  animation: filled 0.3s ease-in-out; 
+  display: inline-block;
+  opacity: 1;
+  background-color: #9356DC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transition-duration: 2s;
+}
+
+.filled {
+  cursor: pointer;
+  background: linear-gradient(#f7f5f5, rgba(00, 15, 15, 0));  /*permet le dégradé du code*/
+}
+.filled:hover {   /*au survol*/
+  animation: filled 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background-color: #9356DC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transition-duration: 1s;
+}
+
+.card-icons {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  top: 0px;
+  right: 0px;
+  margin-left: 210px;
+  margin-top: -70px;
+}
+
+
+.restaurants
+{
+	background-color: #f7f5f5;
+	padding-top: 30px;
+	padding-bottom: 100px;
+}
+
+.restaurants h2
+{
+	margin-left: 0px;
+
+}
+
+.new
+{
+	border-width: 1px;
+	border-color: #99E2D0;
+	background-color: #99E2D0;
+	border-style: solid;
+	border-radius: 3px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	width: 80px;
+	color : #089905;
+	margin-left: 170px;
+	margin-top: -20px;
+	position: absolute;
+	z-index: 1;
+}
+
+
+.card img
+{
+	height: 200px;
+	width: 270px;
+	border-style: hidden;
+	border-radius: 40px 40px 0px 0px;
+	margin-top: -55px;
+
+	
+}
+
+.card
+{
+	height: 290px;
+	width: 270px;
+	border-style: hidden;
+	border-width: 0,5px;
+	border-radius: 40px 40px 40px 40px;
+	background-color: #f7f5f5;
+	margin-left: 20px;
+	margin-top: 100px;
+	box-shadow: 5px 5px 5px rgb(196, 196, 196); /*ombre portée grise*/
+	z-index: 0;
+
+}
+
+.legend
+{
+	padding-left: 20px;
+	display: flex;
+	font-size: 20px;
+}
+
+.lot
+{
+	display: flex;   /*place les cards les unes à côté des autres */
+	flex-direction: row;
+
+}
+
+
+/*FOOTER*/
+
+footer
+{
+	background-color: #292d33;
+	color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+
+}
+
+footer ul 
+{
+	list-style-type: none; /* Retire la puce devant les éléments de la liste*/
+	display: flex;
+}
+
+footer li 
+{
+	padding-right: 200px;
+}
+
+footer a
+{
+	color: white;
+}
+
+footer a:hover
+{
+	color: #99E2D0;
+}
+
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 0px et 1000px */
+@media all and (min-width: 0px) and (max-width: 1000px){
+
+
+
+.logo img
+{
+	width: 700px;
+	margin-left: 400px;
+}
+
+.reservation, .functioning, .localisation, .restaurants, footer
+{
+	width: 1500px;
+}
+
+.localisation 
+{
+	height: 170px;
+}
+
+.reservation
+{
+	height: 800px;
+}
+
+.reservation h1
+{
+	font-size: 70px;
+	border-style: hidden;
+	width: 800px;
+	margin-left: 340px;
+
+}
+
+.reservation p
+{
+	font-size: 50px;
+	border-style: hidden;
+	width: 1200px;
+	margin-left: 150px;
+	color: grey;
+
+}
+
+.localisation p 
+{
+	font-size: 50px;
+}
+
+.button
+{
+	margin-left: 300px;
+	margin-right: 450px;
+	margin-top: 100px;
+	height: 170px;
+	width: 900px;
+	border-radius: 100px;
+}
+
+.explore 
+{
+	font-size: 50px;
+}
+
+.functioning
+{
+	height: 1100px;
+}
+
+.functioning h2
+{
+	font-size: 70px;
+	padding-left: -100px;
+	margin-top: 150px;
+}
+
+
+.number
+{
+	width: 100px;
+	height: 80px;
+	font-size: 50px;
+	margin-left: 90px;
+	z-index: 1;
+}
+
+.sidetoside
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.functioning_list
+{
+
+	margin-right: 0px;
+	margin-left: -60px;
+	width: 1200px;
+	height: 200px;
+	border-radius: 80px;
+}
+
+.functioning_list p
+{
+	font-size: 50px;
+	margin-left: -300px;
+}
+
+
+
+.restaurants 
+{
+	height: 5000px;
+}
+
+.restaurants h2
+{
+	font-size: 70px;
+}
+
+.restaurant_title
+{
+	margin-bottom: 0px;
+}
+
+.lot 
+{
+	margin-top: 50px;
+	margin-left: 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.card img
+{
+	height: 700px;
+	width: 1200px;
+	border-style: hidden;
+	border-radius: 40px 40px 0px 0px;
+}
+
+.card
+{
+	height:1100px;
+	width: 1200px;
+	border-width: 0,5px;
+	border-radius: 40px 40px 40px 40px;
+	background-color: #f7f5f5;
+	margin-left: 60px;
+	margin-top: 100px;
+	box-shadow: 5px 5px 5px rgb(196, 196, 196); /*ombre portée grise*/
+}
+
+.new 
+{
+	margin-left: 890px;
+	margin-top: -20px;
+	width: 210px;
+	font-size: 50px;
+	padding: 30px;
+
+}
+
+.legend
+{
+	padding-left: 20px;
+	display: flex;
+	font-size: 20px;
+	font-size: 70px;
+}
+
+.card-icons {   /*coeur des cards*/
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin-left: 900px;
+  margin-top: -200px;
+  width: 1000px;
+  font-size: 60px;
+}
+
+footer
+{
+	height: 1000px;
+}
+
+footer h2
+{
+	font-size: 100px;
+}
+
+footer ul 
+{
+	display: flex;
+	flex-direction: column;
+	font-size: 50px;
+}
+
+}
+
+
